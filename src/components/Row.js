@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import requests from './../api/requests';
 import axios from '../api/axios';
+import "./Row.css"
 
 export default function Row({ isLargeRow, title, id, fetchUrl }) {
 
