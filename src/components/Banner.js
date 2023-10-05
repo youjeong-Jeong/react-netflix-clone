@@ -27,6 +27,11 @@ export default function Banner() {
         setMovie(movieDetail);
     };
 
+    //설명 글 100자 이상이면 자른 후 ...붙여주는 함수
+    const truncate = (str, n) => {
+        return str?.length > n ? str.substr(0, n-1) + "..." : str;
+    }
+
     return <header
         className="banner"
         style={{
@@ -50,7 +55,7 @@ export default function Banner() {
             </div>
 
             <h1 className="banner__description">
-                {movie.overview}
+                {truncate(movie.overview, 100)}
             </h1>
         </div>
         <div className="banner--fadeBottom" />
